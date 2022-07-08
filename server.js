@@ -15,6 +15,7 @@ MongoClient.connect('mongodb+srv://Yoda:Mavericks1@cluster0.ewzcx1v.mongodb.net/
 
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({extended: true}))
+
 app.get('/', (req, res) => {
     db.collection('quotes').find().toArray()
       .then(results=>{
